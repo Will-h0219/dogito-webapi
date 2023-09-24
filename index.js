@@ -5,12 +5,8 @@ const { dbConnection } = require('./config/database');
 const routerApi = require('./routing');
 
 const app = express();
-const corsOptions = {
-  origin: config.environment === 'DEV' ? 'http://localhost:3000/' : config.productionDomain,
-  optionsSuccessStatus: 200
-};
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 
