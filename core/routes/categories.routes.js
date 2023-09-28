@@ -18,7 +18,7 @@ router.post('/',
 );
 router.post('/subcategories', 
   [
-    check('name', 'El nombre es obligatorio').notEmpty(),
+    check('subcategories', 'Debe ser un array con los nombres').isArray(),
     validateFields
   ],
   createSubcategories
